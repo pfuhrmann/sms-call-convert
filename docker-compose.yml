@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  go:
+    image: golang:latest
+    container_name: go
+    hostname: go
+    volumes:
+        - .:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    command: go run convert.go
