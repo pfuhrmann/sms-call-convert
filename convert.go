@@ -80,7 +80,7 @@ func main() {
 		newSMS := Sms{
 			Address: address,
 			Time: datetime.Format("2 Jan 2006 15:37:15"),
-			Date: strconv.FormatInt(datetime.Unix(), 10),
+			Date: strconv.FormatInt(datetime.UnixNano()/1000000, 10),
 			Type: direction,
 			Body: body,
 			Read: "1",
